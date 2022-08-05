@@ -71,9 +71,9 @@ public class ProgramaPrincipal {
 	
 	
 	
-	// El metodod me devuelve error
+	
 	public static boolean ValidarTarjeta (Tarjetas Origen) throws ParseException {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/mm/dd");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
 		Date FechaActual = new Date();
 		sdf.format(FechaActual);
 		
@@ -104,12 +104,7 @@ public class ProgramaPrincipal {
 		Tarjeta2.cardHolder = "Ana Figueroa";
 		
 		MostrarDatosTarjeta(Tarjeta1);
-		
-		float tasaGaston = CalcularTasa (Tarjeta1);
-		
-		System.out.println(tasaGaston);
 	
-		
 	
 		if(ValidarOperacion(Consumo, ConsumoMaximo)) {
 			System.out.println("La operacion es valida");
@@ -119,16 +114,13 @@ public class ProgramaPrincipal {
 		
 		
 		
-	  /*
-	   *
-		//el metodo me devuelve error
+
 		if (ValidarTarjeta(Tarjeta1)) {
 			System.out.println("La tarjeta es valida ");
 			
+		}else{
+			System.out.println("La tarjeta esta vencida ");
 		}
-	 */
-		
-		
 		
 		
 		if (Tarjeta1.NumTarjeta == Tarjeta2.NumTarjeta) {
@@ -142,12 +134,5 @@ public class ProgramaPrincipal {
 		
 	}
 
-	
-	
-	
-	
-	
-	
-	
 	
 }
